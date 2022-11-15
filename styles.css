@@ -149,12 +149,13 @@ hr {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 66px;
 }
 
 .cards {
     display: flex;
     justify-content: center;
-    
+    gap: 32px;
 }
 
 .cards > div {
@@ -179,4 +180,261 @@ hr {
     color: #4b54fa;
     margin-top: 15px;
     margin-bottom: 9px;
+}
+
+.get-off {
+    margin-top: 71px;
+    height: 350px;
+    background-image: url("./res/vidar-nordli-ma.png");
+    background-size: cover;
+    position: relative;
+    color: white;
+}
+
+.get-off > .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+}
+
+.get-off > .title > p {
+    margin-top: 29px;
+    margin-bottom: 60px;
+}
+.block {
+    height: 350px;
+    position: relative;
+    background-image: linear-gradient(#08aeea 70%, #2af598 10%);
+    opacity: 0.89;
+    top: 0;
+}
+
+input {
+    width: 395px;
+    height: 50px;
+    padding-left: 15px;
+    outline: none;
+    border-radius: 20px;
+}
+
+#email {
+    border: 2px solid white;
+    color: white;
+    background-color: transparent;
+    margin-right: 22px;
+}
+
+input::placeholder{
+    color: white;
+}
+
+button {
+    width: 155px;
+    height: 50px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+
+}
+
+.subscribe {
+    background-color: white;    
+    mix-blend-mode: screen;
+    color: black;
+}
+
+/* HAPPY TRAVELERS */
+.avatar {
+    object-fit: cover; 
+    object-position: -10% 0;
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+}
+
+.reviews {
+    display: flex;
+    gap: 30px;
+    margin-top: 80px;
+    justify-content: center;
+}
+
+.review {
+    width: 368px;
+    height: 409px;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 36px;
+    padding-right: 34px;
+    padding-top: 54px;
+    position: relative;
+}
+
+p {
+    text-align: center;
+    font-size: 16px;
+}
+
+.user {
+    font-size: 18px;
+    color: #4b54fa;
+    margin-top: 21px;
+    margin-bottom: 36px;
+    text-align: center;
+}
+
+.quotes {
+    position: absolute;
+    bottom: 51px;
+}
+
+/* PLAN YOUR TRIP */
+.plan {
+    background-image: url('./res/Brightness_Cont.png');
+    background-size: cover;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.plan > div {
+    margin-top: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+
+}
+
+.book {
+    /* gradient */
+    background-color: black;
+    color: white;
+    width: 170px;
+    margin-top: 48px;
+}
+
+/* POPULAR COUNTRIES */
+.countries {
+    /* es da ramdenime aseti flex containeri mgoni ertad sheidzleba chaiweros */
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin-top: 70px;
+}
+
+.country {
+    height: 425px;
+    width: 271px;
+    background-image: url('./res/mo-baghdadi-109.png');
+    background-size: cover;
+    background-position: 50% 0;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    color: white;
+    gap: 80px;
+    justify-content: space-around;
+}
+
+.country:nth-child(2) {
+    background-image: url('./res/yeo-khee-618704.png');
+    background-position: 60% 0;
+}
+
+.country:nth-child(3) {
+    background-image: url('./res/tom-vining-6680.png');
+    background-position: 60% 0;
+}
+
+.country > button {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: green;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+/* MAP */
+
+.map {
+    height: 435px;
+    background-image: url('./res/map.png');
+    background-size: cover;
+    margin-top: 79px;
+    background-position: 0 60%;
+}
+
+/* FOOTER */
+
+footer  {
+    background-color: #141418;
+    color: #dcdbdb;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    display: flex; 
+    justify-content: space-around;
+    margin-top: 54px;
+}
+
+footer nav {
+    display: flex;
+}
+
+footer nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-right: 60px;
+}
+
+footer a {
+    color: #dcdbdb;
+}
+
+.subscribe-em {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.subscribe-em div {
+    display: flex;
+    position: relative;
+}
+
+.subscribe-em div input {
+    border-radius: 0;
+    height: 48px;
+}
+
+#subscribe-em {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 0;
+    background-color: greenyellow;
+}
+
+footer hr {
+    margin-top: 46px;
+    margin-bottom: 26px;
+    border-color: #e8e8e8;
+}
+
+footer p {
+    margin-bottom: 13px;
 }
