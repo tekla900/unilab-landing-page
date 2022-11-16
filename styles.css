@@ -9,11 +9,10 @@
 body {
     font-family: 'Raleway', sans-serif;
 }
+
 /* HEADER */
 header {
     height: 81px;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -28,15 +27,8 @@ span:not(.price), p {
     text-align: left;
 }
 
-
-.logo {
-    margin-left: 88px;
-}
-
 nav > ul {
-    display: flex;
     gap: 48px;
-    margin-right: 93px;
 }
 
 /* Removing formating */
@@ -47,6 +39,13 @@ ul {
 a {
     text-decoration: none;
     color: #303134;
+    font-size: 15px;
+}
+
+@media (max-width: 1000px) {
+    header a {
+        font-size: 12px;
+    }
 }
 
 /* BANNER */
@@ -55,14 +54,6 @@ a {
     background-image: url('./res/jens-kreuter-96.png');
     background-size: cover;
     background-position: 0 70%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.banner-content {
-    display: flex;
-    flex-direction: column;
     align-items: center;
 }
 
@@ -70,8 +61,13 @@ a {
     font-size: 78.74px;
     letter-spacing: 0;
     color: white;
-    margin-top: 20px;
-    margin-bottom: 55px;
+    margin: 20px 0 55px 0;
+}
+
+@media (max-width: 1000px) {
+    .banner-content > h1 {
+        font-size: 58.74px;
+    }
 }
 
 .banner-nav {
@@ -82,23 +78,24 @@ a {
     place-items: center;
 }
 
-
 /* HOT SERVICES */
 .services {
     display: flex;
     margin: 50px;
-    margin-right: 25px;
-    margin-left: 88px;
-    gap: 40px;
+    gap: 60px;
 }
 
-.first-column {
+@media (max-width: 1000px) {
+    .services {
+        flex-direction: column;
+    }
+}
+
+.first-column  {
     width: 242px;
 }
 
 .sec-column {
-    display: flex;
-    flex-wrap: wrap;
     /* ??? */
     gap: 50px;
 }
@@ -113,17 +110,10 @@ a {
     opacity: 0.8;
     background-image: url("./res/xavier-coiffic-.jpeg");
     background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
     color: white;
 }
 
 .video-title, .package-title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     gap: 12px;
     margin-top: 50px;
 }
@@ -133,31 +123,22 @@ a {
 }
 
 iframe {
-    width: 674px;
+    max-width: 674px;
     height: 330px;
     border: none;
 }
 
-/* achivements */
-.achivements {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 110px;
-    margin-bottom: 68px;
+/* ACHIVEMENTS */
+.achivements {  
+    margin: 110px 0 68px 0;
 }
 
-.achivements > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 .numbers {
     font-size: 32px;
     color: #1a1a1b;
     font-family: 'Lato', sans-serif;
-    margin-top: 32px;
-    margin-bottom: 14px;
+    margin: 32px 0 14px 0;
 }
 
 
@@ -165,31 +146,73 @@ hr {
     border: 1px solid #ebebeb;
 }
 
-/* PACKAGES */
+/* flex row */
+.package, 
+.cards,
+.countries,
+.reviews {
+    display: flex;
+    justify-content: center;
+}
 
-.package {
+/* flex column */
+.banner-content,
+.achivements > div,
+.video-title, .package-title,
+.cards > div,
+.get-off > .title,
+.review,
+.plan,
+.plan > div,
+.video 
+ {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+}
+
+/* space-around */
+.achivements,
+.country,
+.wrapper,
+header,
+.banner  {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* space-between */
+nav,
+nav > ul,
+.video {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* flex-wrap */
+.sec-column,
+.cards,
+.reviews,
+.countries {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* PACKAGES */
+.package { 
     gap: 66px;
+    flex-direction: column;
 }
 
 .cards {
-    display: flex;
-    justify-content: center;
     gap: 32px;
 }
 
 .cards > div {
     width: 267px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     box-shadow: 0px 7px 15px 0px #8d8d8d;
     padding-bottom: 21px;
-
 }
-
 
 .cards > div > img {
     height: 246px;
@@ -202,12 +225,12 @@ hr {
     font-size: 14px;
     color: #1a1a1b;
 }
+
 h4 {
     color: #4b54fa;
     font-size: 18px;
     font-weight: normal;
-    margin-top: 15px;
-    margin-bottom: 9px;
+    margin: 15px 0 9px 0;
 }
 
 .get-off {
@@ -221,16 +244,12 @@ h4 {
 }
 
 .get-off > .title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
     padding-top: 80px;
 }
 
 .get-off > .title > p {
-    margin-top: 29px;
-    margin-bottom: 60px;
+    margin: 29px 0 60px 0;
 }
 
 input {
@@ -258,7 +277,6 @@ button {
     border: none;
     border-radius: 20px;
     cursor: pointer;
-
 }
 
 .subscribe {
@@ -277,35 +295,26 @@ button {
 }
 
 .reviews {
-    display: flex;
     gap: 30px;
     margin-top: 80px;
-    justify-content: center;
 }
 
 .review {
     width: 368px;
     height: 409px;
     background-color: #f4f4f4;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-left: 36px;
-    padding-right: 34px;
-    padding-top: 54px;
+    padding: 54px 34px 36px 0;
     position: relative;
 }
 
 .review > p {
     text-align: center;
-
 }
 
 .user {
     font-size: 18px;
     color: #4b54fa;
-    margin-top: 21px;
-    margin-bottom: 36px;
+    margin: 21px 0 36px 0;
 }
 
 .quotes {
@@ -318,18 +327,11 @@ button {
     background-image: url('./res/Brightness_Cont.png');
     background-size: cover;
     height: 550px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .plan > div {
     margin-top: 320px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     color: white;
-
 }
 
 .book {
@@ -342,9 +344,6 @@ button {
 
 /* POPULAR COUNTRIES */
 .countries {
-    /* es da ramdenime aseti flex containeri mgoni ertad sheidzleba chaiweros */
-    display: flex;
-    justify-content: center;
     gap: 28px;
     margin-top: 70px;
 }
@@ -356,11 +355,9 @@ button {
     background-size: cover;
     background-position: 50% 0;
     position: relative;
-    display: flex;
     align-items: flex-end;
     color: white;
     gap: 80px;
-    justify-content: space-around;
 }
 
 .country:nth-child(2) {
@@ -385,7 +382,6 @@ h3 {
 }
 
 /* MAP */
-
 .map {
     height: 435px;
     background-image: url('./res/map.png');
@@ -395,7 +391,6 @@ h3 {
 }
 
 /* FOOTER */
-
 footer  {
     background-color: #141418;
     color: #dcdbdb;
@@ -404,9 +399,16 @@ footer  {
 }
 
 .wrapper {
-    display: flex; 
-    justify-content: space-around;
     margin-top: 54px;
+}
+
+@media (max-width: 1000px) {
+    .wrapper {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
 }
 
 footer nav {
@@ -418,6 +420,13 @@ footer nav ul {
     flex-direction: column;
     gap: 20px;
     margin-right: 60px;
+}
+
+@media (max-width: 1000px) {
+    footer nav ul {
+        margin-right: 20px;
+        text-align: center;
+    }
 }
 
 footer a {
@@ -451,13 +460,12 @@ footer a {
 }
 
 footer hr {
-    margin-top: 46px;
-    margin-bottom: 26px;
+    margin: 46px 0 26px 0;
     border-color: #e8e8e8;
 }
 
 footer p {
-    margin-bottom: 13px;
+    margin: 0 auto 14px auto;
 }
 
 .price {
@@ -477,4 +485,3 @@ footer p {
     font-weight: bold;
     color: white;
 }
-
