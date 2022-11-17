@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tourist Landing Page</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header>
@@ -13,14 +14,25 @@
             <img src="./res/Tourism.svg">
         </div>
         <nav>
-            <ul>
+            <ul id="main-nav-ul">
                 <li><a href="#">HOME</a></li>
                 <li><a href="#">ABOUT US</a></li>
                 <li><a href="#">OUR SERVICES</a></li>
                 <li><a href="#">TOUR PACKAGE</a></li>
             </ul>
         </nav>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars fa-lg"></i>
+        </a>
     </header>
+    <nav class="mobile">
+        <ul id="mob-nav-links">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT US</a></li>
+            <li><a href="#">OUR SERVICES</a></li>
+            <li><a href="#">TOUR PACKAGE</a></li>
+        </ul>     
+    </nav>
 
     <section class="banner">
         <div class="banner-nav">
@@ -295,6 +307,8 @@
         <p>trourism©All Rights Reserved</p>
 
     </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
 

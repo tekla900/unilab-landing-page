@@ -40,7 +40,7 @@ span:not(.price), p {
     text-align: left;
 }
 
-nav > ul {
+#main-nav-ul {
     gap: 48px;
 }
 
@@ -58,6 +58,45 @@ a {
 @media (max-width: 1000px) {
     header a {
         font-size: 12px;
+    }
+}
+
+/* BURGER MENU */
+.mobile {
+    max-width: 300px;
+    float: right;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    border-bottom-left-radius: 12px;
+}
+
+#mob-nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 50px;
+}
+
+.icon {
+    display: none;
+}
+
+#mob-nav-links li {
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+}
+
+@media (max-width: 750px) {
+    /* hide navbar */
+     /* hide main navbar ul */
+    .main-nav, #main-nav-ul {
+        display: none;
+    }
+   
+    /* uncover burger menu icon */
+    .icon {
+        display: block;
     }
 }
 
@@ -498,3 +537,4 @@ footer p {
     font-weight: bold;
     color: white;
 }
+
