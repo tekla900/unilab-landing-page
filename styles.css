@@ -103,7 +103,7 @@ a {
 /* BANNER */
 .banner {
     height: 569px;
-    background-image: url('./res/jens-kreuter-96.png');
+    background-image: url('./res/banner.png');
     background-size: cover;
     background-position: 0 70%;
     align-items: center;
@@ -538,3 +538,8 @@ footer p {
     color: white;
 }
 
+
+.sec-column img {
+    height: 198px;
+    width: 100%;
+ }
