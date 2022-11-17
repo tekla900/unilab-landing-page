@@ -24,27 +24,6 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
-/* HEADER */
-header {
-    height: 81px;
-    align-items: center;
-}
-
-h2 {
-    color: var(--heading-color);
-    font-size: 26px;
-}
-
-span:not(.price), p {
-    font-size: 16px;
-    color: var(--par-color);
-    text-align: left;
-}
-
-#main-nav-ul {
-    gap: 48px;
-}
-
 /* Removing formating */
 ul {
     list-style: none;
@@ -53,14 +32,91 @@ ul {
 a {
     text-decoration: none;
     color: var(--links);
-    font-size: 15px;
+    font-size: 16px;
 }
 
 @media (max-width: 1000px) {
-    header a {
+    a {
         font-size: 12px;
     }
 }
+
+/* general rules */
+h1 {
+    font-size: 78.74px;
+    letter-spacing: 0;
+    color: white;
+    margin: 20px 0 55px 0;
+    z-index: 2;
+    text-align: center;
+}
+
+@media (max-width: 1000px) {
+    h1 {
+        font-size: 50px;
+    }
+}
+
+h2 {
+    color: var(--heading-color);
+    font-size: 26px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 30px;
+    text-align: center;
+}
+
+h4 {
+    color: var(--bright-blue);
+    font-size: 18px;
+    font-weight: normal;
+    margin: 15px 0 9px 0;
+}
+
+input::placeholder{
+    color: white;
+}
+
+button {
+    width: 155px;
+    height: 50px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.gradient-btn {
+    background: var(--gradient);
+}
+
+span:not(.price), p {
+    font-size: 16px;
+    color: var(--par-color);
+    text-align: left;
+}
+
+input {
+    width: 395px;
+    height: 50px;
+    padding-left: 15px;
+    outline: none;
+    border-radius: 20px;
+    z-index: 2;
+}
+
+/* HEADER */
+header {
+    height: 81px;
+    align-items: center;
+}
+
+#main-nav-ul {
+    z-index: 4;
+    gap: 48px;
+}
+
 
 /* BURGER MENU */
 .mobile {
@@ -70,6 +126,7 @@ a {
     right: 0;
     background-color: white;
     border-bottom-left-radius: 12px;
+    z-index: 4;
 }
 
 #mob-nav-links {
@@ -77,6 +134,7 @@ a {
     flex-direction: column;
     gap: 20px;
     padding: 20px 50px;
+    z-index: 4;
 }
 
 .icon {
@@ -111,20 +169,6 @@ a {
     position: relative;
 }
 
-.banner-content > h1 {
-    font-size: 78.74px;
-    letter-spacing: 0;
-    color: white;
-    margin: 20px 0 55px 0;
-    z-index: 2;
-}
-
-@media (max-width: 1000px) {
-    .banner-content > h1 {
-        font-size: 50px;
-    }
-}
-
 .banner-nav {
     background-color: white;
     height: 33px;
@@ -153,7 +197,6 @@ a {
     z-index: 2;
 }
 
-
 /* HOT SERVICES */
 .services {
     display: flex;
@@ -172,12 +215,22 @@ a {
 }
 
 .sec-column {
-    /* ??? */
     gap: 50px;
+}
+
+.sec-column img {
+    height: 198px;
+    width: 100%;
 }
 
 .card {
     width: 268px;
+}
+
+@media (max-width: 1000px) {
+    .card {
+        width: 250px;
+    }
 }
 
 /* VIDEO TOUR */
@@ -218,9 +271,6 @@ iframe {
 }
 
 @media (max-width: 750px) {
-    .achivements div{
-        /* width: 100px; */
-    }
     .numbers {
         font-size: 26px;
         margin: 26px 0 10px 0;
@@ -322,12 +372,7 @@ nav > ul,
     color: var(--heading-color);
 }
 
-h4 {
-    color: var(--bright-blue);
-    font-size: 18px;
-    font-weight: normal;
-    margin: 15px 0 9px 0;
-}
+
 
 .get-off {
     margin-top: 71px;
@@ -359,14 +404,25 @@ h4 {
     color: white;
 }
 
-input {
-    width: 395px;
-    height: 50px;
-    padding-left: 15px;
-    outline: none;
-    border-radius: 20px;
-    z-index: 2;
+.discount-form {
+    display: flex;
+    align-items: center;
 }
+
+@media (max-width: 1000px) {
+    .get-off  .title  p {
+        margin: 19px 0 40px 0;
+    }
+    .discount-form {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .discount-form input {
+        width: 300px;
+    }
+}
+
+
 
 #email {
     border: 2px solid white;
@@ -374,18 +430,6 @@ input {
     background-color: transparent;
     margin-right: 22px;
     z-index: 2;
-}
-
-input::placeholder{
-    color: white;
-}
-
-button {
-    width: 155px;
-    height: 50px;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
 }
 
 .subscribe {
@@ -412,7 +456,7 @@ button {
     width: 368px;
     height: 409px;
     background-color: var(--light-gray);
-    padding: 54px 34px 36px 0;
+    padding: 54px 34px 0 36px;
     position: relative;
 }
 
@@ -440,12 +484,15 @@ button {
 
 .plan > div {
     margin-top: 320px;
+}
+
+.plan-trip h2 {
     color: white;
+    font-size: 36px;
+    font-weight: normal;
 }
 
 .book {
-    /* gradient */
-    background-color: black;
     color: white;
     width: 170px;
     margin-top: 48px;
@@ -492,9 +539,7 @@ button {
     background-color: green;
 }
 
-h3 {
-    font-size: 30px;
-}
+
 
 /* MAP */
 .map {
@@ -566,12 +611,12 @@ footer a {
 
 #subscribe-em {
     position: absolute;
-    top: 0;
     right: 0;
     width: 48px;
     height: 48px;
     border-radius: 0;
-    background-color: greenyellow;
+    z-index: 3;
+    background: var(--gradient);
 }
 
 footer hr {
@@ -585,10 +630,7 @@ footer p {
 
 
 
-.sec-column img {
-    height: 198px;
-    width: 100%;
-}
+
 
 .black-block {
     width: 100%;
@@ -613,3 +655,4 @@ footer p {
 .get-off-gradient {
     opacity: 0.6;
 }
+

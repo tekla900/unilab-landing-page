@@ -11,6 +11,8 @@ function myFunction() {
 }
 
 let container = document.querySelector('.sec-column');
+
+// info to add
 let info = [
   ['./res/1.svg', 'FLIGHT BOOKING', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem.'],
   ['./res/2.png', 'HOTEL & RESORT BOOKING', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem.'],
@@ -20,6 +22,8 @@ let info = [
   ['./res/6.png', 'CORPORATE HOLIDAYS', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem.'],
 ];
 
+
+// addind info to single card and then to container
 for (let each in info) {
   let card = document.createElement('div');
   let img = document.createElement('img'); 
