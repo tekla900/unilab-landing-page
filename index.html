@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tourist Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="icon" type="image/png" sizes="32x32" href="./res/unilab.png"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -45,8 +47,8 @@
             <span class="price">
                 From $199/Person
             </span>
-            <h1>Discover Greece</h1>
-            <p>TRAVEL WITH UNIQUE EXPERIENCE </p>
+            <h1 class="white">Discover Greece</h1>
+            <p class="white small">TRAVEL WITH UNIQUE EXPERIENCE </p>
         </div>
         <div class="banner-nav">
             <a href="#"><img src="./res/right-arrow.svg"></a>
@@ -66,15 +68,37 @@
         </div>
 
         <div class="sec-column">
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel"></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <div class="modal-body">
+                            <p id="modal-par"></p>
+                            <img src="" id="modal-img">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
         </div>
     </section>
 
     <section class="video">
         <div class="black-block"></div>
         <div class="video-title">  
-            <span id="video-disc">DISCOVER</span>
-            <h2>Watch Our Video Tour</h2>
-            <img src="./res/wave2.svg">
+            <span id="video-disc" class="white">DISCOVER</span>
+            <h2 class="white">Watch Our Video Tour</h2>
+            <img src="./res/white-wave.png">
         </div>
 
         <iframe src="https://www.youtube.com/embed/3t33zXTP0ak">
@@ -117,25 +141,25 @@
         </div>
 
         <div class="cards">
-            <div class="">
+            <div>
                 <img src="./res/greece.png">
                 <span>$299/person</span>
-                <h4>Blue Beauty of Greece</h4>
-                <span>5 Days / 6 Night</span>
+                <h4 class="blue large-p">Blue Beauty of Greece</h4>
+                <span class="small">5 Days / 6 Night</span>
             </div>
 
-            <div class="">
+            <div>
                 <img src="./res/alex-block-4290.png">
                 <span>$178/person</span>
-                <h4>Nature of Phuket</h4>
-                <span>3 Days / 4 Night</span>
+                <h4 class="blue large-p">Nature of Phuket</h4>
+                <span class="small">3 Days / 4 Night</span>
             </div>
 
-            <div class="">
+            <div>
                 <img src="./res/anthony-delanoi.png">
                 <span>$1111/person</span>
-                <h4>World Tour of Paris</h4>
-                <span>7 Days / 8 Night</span>
+                <h4 class="blue large-p">World Tour of Paris</h4>
+                <span class="small">7 Days / 8 Night</span>
             </div>
         </div>
     </section>
@@ -143,11 +167,11 @@
     <section class="get-off">
         <div class="get-off-gradient block"></div>
         <div class="title">
-            <h2 class="discount">Get 10% Off on Your Next Travel</h2>
-            <p>Maximum doscout 1000$ per person</p>
+            <h2 class="discount white">Get 10% Off on Your Next Travel</h2>
+            <p class="large-p white">Maximum doscout 1000$ per person</p>
 
             <form class="discount-form">
-                <input type="email" name="email" id="email" placeholder="Enter Your email">
+                <input type="email" name="email" id="email" class="white" placeholder="Enter Your email">
                 <button class="subscribe" type="button">SUBSCRIBE</button>
             </form>
         </div>
@@ -163,7 +187,7 @@
         <div class="reviews">
             <div class="review">
                 <img src="./res/Layer 6.png" class="avatar">
-                <p class="user">Ribeca Singh</p>
+                <p class="user blue large-p">Ribeca Singh</p>
 
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
                 <img src="./res/quotation.svg" class="quotes">
@@ -171,7 +195,7 @@
 
             <div class="review">
                 <img src="./res/prof2.png" class="avatar">
-                <p class="user">Jimmy dean</p>
+                <p class="user blue large-p">Jimmy dean</p>
 
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
                 <img src="./res/quotation.svg" class="quotes">
@@ -179,7 +203,7 @@
 
             <div class="review">
                 <img src="./res/prof3.png" class="avatar">
-                <p class="user">Theodule Terer</p>
+                <p class="user blue large-p">Theodule Terer</p>
 
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
                 <img src="./res/quotation.svg" class="quotes">
@@ -189,8 +213,8 @@
 
     <section class="plan">
         <div class="plan-trip">
-            <h2>Ready to plan your trip?</h2>
-            <button class="book gradient-btn">BOOK NOW</button>
+            <h2 class="white">Ready to plan your trip?</h2>
+            <button class="book white gradient-btn">BOOK NOW</button>
         </div>
     </section>
 
@@ -204,32 +228,32 @@
         <div class="countries">
             <div class="country">
                 <div>
-                    <h3>Thailand</h3>
-                    <span>$900 - $1900</span>
+                    <h3 class="white">Thailand</h3>
+                    <span class="small">$900 - $1900</span>
                 </div>  
                 <button type="button" class="go-to gradient-btn"><img src="./res/Forma12.png"></button>       
             </div>
 
             <div class="country">
                 <div>
-                    <h3>Italy</h3>
-                    <span>$700 - $2000</span>
+                    <h3 class="white">Italy</h3>
+                    <span class="small">$700 - $2000</span>
                 </div>  
                 <button type="button" class="go-to gradient-btn"><img src="./res/Forma12.png"></button>       
             </div>
 
             <div class="country">
                 <div>
-                    <h3>Indonesia</h3>
-                    <span>$300 - $1100</span>
+                    <h3 class="white">Indonesia</h3>
+                    <span class="small">$300 - $1100</span>
                 </div>  
                 <button type="button" class="go-to gradient-btn"><img src="./res/Forma12.png"></button>       
             </div>
 
             <div class="country">
                 <div>
-                    <h3>Singapore</h3>
-                    <span>$1900 - $2700</span>
+                    <h3 class="white">Singapore</h3>
+                    <span class="small">$1900 - $2700</span>
                 </div>  
                 <button type="button" class="go-to gradient-btn"><img src="./res/Forma12.png"></button>       
             </div>
@@ -243,7 +267,7 @@
         <div class="wrapper">
             <nav>
                 <ul>
-                    <li class="li-title">Quick Links</li>
+                    <li class="li-title white">Quick Links</li>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About Company</a></li>
                     <li><a href="#">Testimonials</a></li>
@@ -251,7 +275,7 @@
                 </ul>
 
                 <ul>
-                    <li class="li-title">Support</li>
+                    <li class="li-title white">Support</li>
                     <li><a href="#">Get Started</a></li>
                     <li><a href="#">Lorem</a></li>
                     <li><a href="#">Help</a></li>
@@ -259,7 +283,7 @@
                 </ul>
 
                 <ul>
-                    <li class="li-title">Address</li>
+                    <li class="li-title white">Address</li>
                     <li>14, 1 Ellis bridge ST, </li>
                     <li>auckland 3500, Australia</li>
                     <li>+1234567890</li>
@@ -267,8 +291,8 @@
                 </ul>
             </nav>
 
-            <form action="" class="subscribe-em">
-                <p>Subscribe to our newsletter</p>
+            <form class="subscribe-em">
+                <p class="white">Subscribe to our newsletter</p>
                 <div>
                     <input type="email" name="email-sub" id="email-sub">
                     <button id="subscribe-em"></button>
@@ -282,6 +306,9 @@
 
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="scripts.js"></script>
 </body>
 </html>

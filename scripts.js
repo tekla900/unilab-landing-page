@@ -24,11 +24,20 @@ function burgerMenu() {
 // adding info to single card and then to container
 for (let each in info) {
   let card = document.createElement('div');
+  let button = document.createElement('button');
   let img = document.createElement('img'); 
   let h4 = document.createElement('h4'); 
   let p = document.createElement('p'); 
 
   card.classList.add('card');
+  card.classList.add('card');
+  button.classList.add('card-button');
+  img.dataset.toggle = "modal";
+  img.dataset.target = "#exampleModal";
+  img.dataset.title = info[each][1];
+  img.dataset.par = info[each][2];
+  img.dataset.src = info[each][0];
+
   img.src = info[each][0];
   h4.textContent = info[each][1];
   p.textContent = info[each][2];
@@ -40,4 +49,20 @@ for (let each in info) {
   container.appendChild(card);
 }
 
+// MODALS
+$('#exampleModal').on('show.bs.modal', function (e) {
 
+  let button = $(e.relatedTarget); // Button(image) that triggered the modal
+
+  // Extract info from data-* attributes
+  let title = button.data('title'); 
+  let par = button.data('par'); 
+  let src = button.data('src');
+
+  let modal = $(this);
+
+  // write info into modal
+  modal.find('.modal-title').text(title)
+  modal.find('#modal-par').text(par);
+  modal.find('#modal-img').attr('src', src);
+})

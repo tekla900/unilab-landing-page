@@ -35,6 +35,10 @@ a {
     font-size: 16px;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
 @media (max-width: 1000px) {
     a {
         font-size: 12px;
@@ -45,7 +49,6 @@ a {
 h1 {
     font-size: 78.74px;
     letter-spacing: 0;
-    color: white;
     margin: 20px 0 55px 0;
     z-index: 2;
     text-align: center;
@@ -75,8 +78,6 @@ h3 {
 }
 
 h4 {
-    color: var(--bright-blue);
-    font-size: 18px;
     font-weight: normal;
     margin: 15px 0 9px 0;
 }
@@ -123,6 +124,21 @@ hr {
     border: 1px solid var(--hr);
 }
 
+.blue {
+    color: var(--bright-blue);
+}
+
+.white {
+    color: white;
+}
+
+.small {
+    font-size: 14px;
+}
+
+.large-p {
+    font-size: 18px;
+}
 /* gradient background */
 .block {
     background-image: var(--gradient);
@@ -185,6 +201,9 @@ nav > ul,
     flex-wrap: wrap;
 }
 
+
+
+
 /* HEADER */
 header {
     height: 81px;
@@ -194,8 +213,8 @@ header {
 #main-nav-ul {
     z-index: 4;
     gap: 48px;
+    margin: 0;
 }
-
 
 /* BURGER MENU */
 .mobile {
@@ -274,10 +293,8 @@ header {
 }
 
 .banner-content p {
-    font-size: 18px; 
-    font-weight: bold;
-    color: white;
     z-index: 2;
+    font-weight: bold;
 }
 
 /* HOT SERVICES */
@@ -297,8 +314,8 @@ header {
     }
 }
 
-.first-column  {
-    width: 242px;
+.first-column h2, .first-column p {
+    width: 200px;
 }
 
 .sec-column {
@@ -312,6 +329,7 @@ header {
 
 .card {
     width: 268px;
+    border: none !important;
 }
 
 @media (max-width: 1000px) {
@@ -326,7 +344,6 @@ header {
     opacity: 0.8;
     background-image: url("./res/xavier-coiffic-.jpeg");
     background-size: cover;
-    color: white;
     position: relative;
 }
 
@@ -337,7 +354,6 @@ header {
 }
 
 .video-title *, #video-disc {
-    color: white;
     z-index: 2;
 }
 
@@ -399,7 +415,6 @@ header {
 }
 
 .cards > div span {
-    font-size: 14px;
     color: var(--heading-color);
 }
 
@@ -412,7 +427,6 @@ header {
     background-size: cover;
     background-position: 0% 40%;
     position: relative;
-    color: white;
 }
 
 .get-off-gradient {
@@ -430,13 +444,10 @@ header {
 
 .get-off .title  p {
     margin: 29px 0 60px 0;
-    font-size: 18px;
-    color: white;
 }
 
 .discount {
     font-size: 34px;
-    color: white;
 }
 
 .discount-form {
@@ -459,7 +470,6 @@ header {
 
 #email {
     border: 2px solid white;
-    color: white;
     background-color: transparent;
     margin-right: 22px;
     z-index: 2;
@@ -469,6 +479,7 @@ header {
     background-color: white;    
     mix-blend-mode: screen;
     color: black;
+    border-radius: 20px;
 }
 
 /* HAPPY TRAVELERS */
@@ -498,8 +509,6 @@ header {
 }
 
 .user {
-    font-size: 18px;
-    color: var(--bright-blue);
     margin: 21px 0 36px 0;
 }
 
@@ -520,15 +529,14 @@ header {
 }
 
 .plan-trip h2 {
-    color: white;
     font-size: 36px;
     font-weight: normal;
 }
 
 .book {
-    color: white;
     width: 170px;
     margin-top: 48px;
+    border-radius: 20px;
 }
 
 /* POPULAR COUNTRIES */
@@ -546,7 +554,6 @@ header {
     position: relative;
     align-items: flex-end;
     padding: 10px;
-    color: white;
     gap: 80px;
 }
 
@@ -561,7 +568,6 @@ header {
 }
 
 .country span {
-    font-size: 14px;
     color: #fefeff;
 }
 
@@ -624,6 +630,10 @@ footer a {
     color: var(--footer-col);
 }
 
+.li-title {
+    font-weight: bold;
+}
+
 .subscribe-em {
     display: flex;
     flex-direction: column;
@@ -656,7 +666,9 @@ footer hr {
 }
 
 footer p {
-    margin: 0 auto 14px auto;
+    padding-bottom: 14px;
+    text-align: center;
+    margin: 0;
 }
 
 /* API */
@@ -680,4 +692,11 @@ footer p {
         height: 300px;
         margin: 20px;
     }
+}
+
+
+.close {
+    display: grid;
+    place-items: center;
+    color: inherit;
 }
