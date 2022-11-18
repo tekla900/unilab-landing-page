@@ -63,6 +63,12 @@ h2 {
     text-align: center;
 }
 
+@media (max-width: 1000px) {
+    h2 {
+        font-size: 22px;
+    }
+}
+
 h3 {
     font-size: 30px;
     text-align: center;
@@ -104,6 +110,79 @@ input {
     outline: none;
     border-radius: 20px;
     z-index: 2;
+}
+
+iframe {
+    max-width: 674px;
+    height: 330px;
+    border: none;
+    z-index: 2;
+}
+
+hr {
+    border: 1px solid var(--hr);
+}
+
+/* gradient background */
+.block {
+    background-image: var(--gradient);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+/* GROUPING TOGETHER */
+/* flex row center*/
+.package, 
+.cards,
+.countries,
+.reviews {
+    display: flex;
+    justify-content: center;
+}
+
+/* flex column center*/
+.banner-content,
+.achivements > div,
+.video-title, .package-title,
+.cards > div,
+.get-off > .title,
+.review,
+.plan,
+.plan > div,
+.video 
+ {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* row space-around */
+.achivements,
+.country,
+.wrapper,
+header,
+.banner  {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* row space-between */
+nav,
+nav > ul,
+.video {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* flex-wrap */
+.sec-column,
+.cards,
+.reviews,
+.countries {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 /* HEADER */
@@ -190,6 +269,10 @@ header {
     z-index: 2;
 }
 
+.gradient {
+    opacity: 0.55;
+}
+
 .banner-content p {
     font-size: 18px; 
     font-weight: bold;
@@ -202,6 +285,10 @@ header {
     display: flex;
     margin: 50px;
     gap: 60px;
+}
+
+.services * {
+    text-align: left;
 }
 
 @media (max-width: 1000px) {
@@ -254,11 +341,12 @@ header {
     z-index: 2;
 }
 
-iframe {
-    max-width: 674px;
-    height: 330px;
-    border: none;
-    z-index: 2;
+.black-block {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    opacity: 0.9;
 }
 
 /* ACHIVEMENTS */
@@ -280,68 +368,11 @@ iframe {
     }
 }
 
-
 .numbers {
     font-size: 32px;
     color: var(--heading-color);
     font-family: 'Lato', sans-serif;
     margin: 32px 0 14px 0;
-}
-
-hr {
-    border: 1px solid var(--hr);
-}
-
-/* flex row */
-.package, 
-.cards,
-.countries,
-.reviews {
-    display: flex;
-    justify-content: center;
-}
-
-/* flex column */
-.banner-content,
-.achivements > div,
-.video-title, .package-title,
-.cards > div,
-.get-off > .title,
-.review,
-.plan,
-.plan > div,
-.video 
- {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* space-around */
-.achivements,
-.country,
-.wrapper,
-header,
-.banner  {
-    display: flex;
-    justify-content: space-around;
-}
-
-/* space-between */
-nav,
-nav > ul,
-.video {
-    display: flex;
-    justify-content: space-between;
-}
-
-/* flex-wrap */
-.sec-column,
-.cards,
-.reviews,
-.countries {
-    display: flex;
-    flex-wrap: wrap;
 }
 
 /* PACKAGES */
@@ -373,7 +404,7 @@ nav > ul,
 }
 
 
-
+/* GET DISCOUNT */
 .get-off {
     margin-top: 71px;
     height: 350px;
@@ -384,16 +415,20 @@ nav > ul,
     color: white;
 }
 
-.get-off  .title {
+.get-off-gradient {
+    opacity: 0.6;
+}
+
+.get-off .title {
     justify-content: center;
     padding-top: 80px;
 }
 
-.get-off  .title * {
+.get-off .title * {
     z-index: 2;
 }
 
-.get-off  .title  p {
+.get-off .title  p {
     margin: 29px 0 60px 0;
     font-size: 18px;
     color: white;
@@ -421,8 +456,6 @@ nav > ul,
         width: 300px;
     }
 }
-
-
 
 #email {
     border: 2px solid white;
@@ -539,8 +572,6 @@ nav > ul,
     background-color: green;
 }
 
-
-
 /* MAP */
 .map {
     height: 435px;
@@ -628,31 +659,25 @@ footer p {
     margin: 0 auto 14px auto;
 }
 
-
-
-
-
-.black-block {
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    position: absolute;
-    opacity: 0.9;
+/* API */
+.users {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-.block {
-    background-image: var(--gradient);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 1;
+.api-user {
+    justify-content: space-around;
+    padding: 15px;
+    width: 300px;
+    height: 350px;
+    margin: 25px;
 }
 
-.gradient {
-    opacity: 0.55;
+@media (max-width: 800px) {
+    .api-user {
+        width: 250px;
+        height: 300px;
+        margin: 20px;
+    }
 }
-
-.get-off-gradient {
-    opacity: 0.6;
-}
-

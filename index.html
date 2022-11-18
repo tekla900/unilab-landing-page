@@ -17,11 +17,12 @@
             <ul id="main-nav-ul">
                 <li><a href="#">HOME</a></li>
                 <li><a href="#">ABOUT US</a></li>
-                <li><a href="#">OUR SERVICES</a></li>
-                <li><a href="#">TOUR PACKAGE</a></li>
+                <li><a href="#services">OUR SERVICES</a></li>
+                <li><a href="#popular">TOUR PACKAGE</a></li>
+                <li><a href="./api.html">API</a></li>
             </ul>
         </nav>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <a href="javascript:void(0);" class="icon" onclick="burgerMenu()">
             <i class="fa fa-bars fa-lg"></i>
         </a>
     </header>
@@ -29,8 +30,9 @@
         <ul id="mob-nav-links">
             <li><a href="#">HOME</a></li>
             <li><a href="#">ABOUT US</a></li>
-            <li><a href="#">OUR SERVICES</a></li>
-            <li><a href="#">TOUR PACKAGE</a></li>
+            <li><a href="#services">OUR SERVICES</a></li>
+            <li><a href="#popular"">TOUR PACKAGE</a></li>
+            <li><a href="./api.html">API</a></li>
         </ul>     
     </nav>
 
@@ -51,7 +53,7 @@
         </div>  
     </section>
 
-    <section class="services">
+    <section class="services" id="services">
         <div class="first-column">
             <span>DISCOVER</span>
             <h2>Our Hot Services</h2>
@@ -146,7 +148,7 @@
 
             <form class="discount-form">
                 <input type="email" name="email" id="email" placeholder="Enter Your email">
-                <button class="subscribe">SUBSCRIBE</button>
+                <button class="subscribe" type="button">SUBSCRIBE</button>
             </form>
         </div>
     </section>
@@ -192,7 +194,7 @@
         </div>
     </section>
 
-    <section class="popular">
+    <section class="popular" id="popular">
         <div class="package-title">
             <span>DESTINATION</span>
             <h2>DESTINATION</h2>

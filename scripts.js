@@ -1,15 +1,3 @@
-
-
-// un/hides burger menu button
-function myFunction() {
-    let x = document.getElementById("mob-nav-links");
-    if (x.style.display === "flex") {
-      x.style.display = "none";
-    } else {
-      x.style.display = "flex";
-    }
-}
-
 let container = document.querySelector('.sec-column');
 
 // info to add
@@ -23,7 +11,17 @@ let info = [
 ];
 
 
-// addind info to single card and then to container
+// un/hides burger menu button
+function burgerMenu() {
+    let x = document.getElementById("mob-nav-links");
+    if (x.style.display === "flex") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "flex";
+    }
+}
+
+// adding info to single card and then to container
 for (let each in info) {
   let card = document.createElement('div');
   let img = document.createElement('img'); 
@@ -40,7 +38,6 @@ for (let each in info) {
   card.appendChild(p);
 
   container.appendChild(card);
-  console.log(info[each]);
 }
 
-console.log(container)
+
