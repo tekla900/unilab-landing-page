@@ -1,5 +1,7 @@
+/* importing fonts: Lato and Raleway */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Raleway:wght@400;500;600;700&display=swap');
 
+/* creating css variables for colors */
 :root {
     --heading-color: #1a1a1b;
     --par-color: #8d8d8d;
