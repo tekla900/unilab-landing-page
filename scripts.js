@@ -1,8 +1,13 @@
 let container = document.querySelector('.sec-column');
+let banner = document.querySelector('.banner');
+let h1 = document.querySelector('h1');
+let arrows = document.querySelectorAll('.arrows');
+let leftArrow = document.getElementById('left');
+let rightArrow = document.getElementById('right');
 
 // info to add
 let info = [
-  ['./res/1.svg', 'FLIGHT BOOKING', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem.'],
+  ['./res/1.png', 'FLIGHT BOOKING', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem.'],
   ['./res/2.png', 'HOTEL & RESORT BOOKING', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem.'],
   ['./res/3.png', 'FAMILY TRIP PLANNER', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem.'],
   ['./res/4.png', 'CRUISE TOUR', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem.'],
@@ -13,25 +18,44 @@ let info = [
 
 // un/hides burger menu button
 function burgerMenu() {
-    let x = document.getElementById("mob-nav-links");
-    if (x.style.display === "flex") {
-      x.style.display = "none";
+    let nav = document.getElementById("mob-nav-links");
+    if (nav.style.display === "flex") {
+      nav.style.display = "none";
     } else {
-      x.style.display = "flex";
+      nav.style.display = "flex";
     }
 }
+
+// changing banner on click of navigation buttons
+let currentBanner = 0; //storing current banner
+
+arrows.forEach(arrow => {  // adding event listener on each arrow
+  arrow.addEventListener('click', changeSlide);
+});
+
+function changeSlide() {
+  if (currentBanner % 2 == 0) {
+    // if current banner is greece, changes to switzerland
+    banner.style.backgroundImage = "url('./res/Brightness_Cont.png')";
+    h1.textContent = 'Discover Switzerland';
+    currentBanner += 1;
+  } else {
+    // else changes to greece
+    banner.style.backgroundImage = "url('./res/banner.png')";
+    h1.textContent = 'Discover Greece';
+    currentBanner += 1;
+  };
+};
 
 // adding info to single card and then to container
 for (let each in info) {
   let card = document.createElement('div');
-  let button = document.createElement('button');
   let img = document.createElement('img'); 
   let h4 = document.createElement('h4'); 
   let p = document.createElement('p'); 
 
   card.classList.add('card');
-  card.classList.add('card');
-  button.classList.add('card-button');
+  img.classList.add('btn-img');
   img.dataset.toggle = "modal";
   img.dataset.target = "#exampleModal";
   img.dataset.title = info[each][1];

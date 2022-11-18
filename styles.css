@@ -94,6 +94,10 @@ button {
     cursor: pointer;
 }
 
+button:hover {
+    transform: scale(1.05);
+}
+
 .gradient-btn {
     background: var(--gradient);
 }
@@ -276,6 +280,10 @@ header {
     z-index: 2;
 }
 
+#left, #right {
+    cursor: pointer;
+}
+
 .price {
     height: 92px;
     width: 287px;
@@ -306,6 +314,10 @@ header {
 
 .services * {
     text-align: left;
+}
+
+.btn-img {
+    cursor: pointer;
 }
 
 @media (max-width: 1000px) {
@@ -402,9 +414,18 @@ header {
 }
 
 .cards > div {
+    position: relative;
     width: 267px;
     box-shadow: 0px 7px 15px 0px var(--par-color);
     padding-bottom: 21px;
+}
+
+.yellow {
+    position: absolute;
+    background-color: #fed701;
+    padding: 7px 8px 3px 8px;
+    top: 7px;
+    left: 13px;
 }
 
 .cards > div > img {
